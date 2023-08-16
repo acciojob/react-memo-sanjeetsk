@@ -32,19 +32,20 @@ const App = () => {
     }, [todos]);
 
     return (
-        <div>
+        <div id="main">
             <h1>React Memo App</h1>
             <div>
-                <button onClick={handleAddTodo}>Add Todo</button>
+                <button onClick={handleAddTodo} id="add-todo-btn">Add Todo</button>
                 <span>{todos.length}</span>
             </div>
             <div>
-                <button onClick={handleIncrement}>Increment</button>
+                <button onClick={handleIncrement} id="incr-cnt">Increment</button>
                 <span>{count}</span>
             </div>
             <div>
                 <input
                     type="text"
+                    id="skill-input"
                     value={inputText}
                     onChange={handleInputChange}
                 />
