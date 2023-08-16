@@ -39,8 +39,7 @@ const App = () => {
                 <span>{todos.length}</span>
             </div>
             <div>
-                <button onClick={handleIncrement} id="incr-cnt">Increment</button>
-                <span>{count}</span>
+                <span>Count: <button onClick={handleIncrement} id="incr-cnt">{count}</button></span>
             </div>
             <div>
                 <input
@@ -49,12 +48,12 @@ const App = () => {
                     value={inputText}
                     onChange={handleInputChange}
                 />
-                <button onClick={handleMemoSubmit}>Submit</button>
+                <button id="skill-btn" onClick={handleMemoSubmit}>Submit</button>
             </div>
             <div>
                 <ul>
                     {todos.map((todo, index) => (
-                        <li key={index}>{todo}</li>
+                        <li id={"todo-"+index} key={index}>{todo}</li>
                     ))}
                 </ul>
             </div>
