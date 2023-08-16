@@ -7,7 +7,7 @@ const App = () => {
     const [inputText, setInputText] = useState('');
 
     const handleAddTodo = () => {
-        setTodos([...todos, 'New todo']);
+        setTodos([...todos, 'New Todo']);
     };
 
     const handleIncrement = () => {
