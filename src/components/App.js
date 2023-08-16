@@ -3,7 +3,9 @@ import { useState, useEffect } from "react";
 
 const App = () => {
     const [todos, setTodos] = useState([]);
+      
     const [calculation, setCalculation] = useState("10");
+    const [count, setCount] = useState(0);
     const [textValue, setTextValue] = useState('');
     const [inputText, setInputText] = useState([]);
 
@@ -12,6 +14,7 @@ const App = () => {
     };
 
     const handleIncrement = () => {
+        setCount(prevCount => prevCount + 1);
         setCalculation(prevCount => prevCount + "0");
     };
 
@@ -44,7 +47,7 @@ const App = () => {
             <button onClick={handleAddTodo} id="add-todo-btn">Add Todo</button>
             <hr></hr>
             <div>
-                <span>Count: 0<button onClick={handleIncrement} id="incr-cnt">+</button></span>
+                <span>Count: {count}<button onClick={handleIncrement} id="incr-cnt">+</button></span>
                 <h2>Expensive Calculation</h2>
                 <p id="calc">{calculation}</p>
             </div>
